@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>mammuthus</groupId>
+  <artifactId>DCS</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>DCS</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.csdn</groupId>
+      <artifactId>ServiceFramework</artifactId>
+      <version>1.3.0-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.alibaba</groupId>
+          <artifactId>dubbo</artifactId>
+        </exclusion>
+        <!--mongo相关-->
+        <exclusion>
+          <groupId>net.csdn</groupId>
+          <artifactId>MongoMongo</artifactId>
+        </exclusion>
+
+        <!--ORM(hibernate)相关-->
+        <exclusion>
+          <groupId>net.csdn</groupId>
+          <artifactId>ActiveORM</artifactId>
+        </exclusion>
+
+        <!--thrift相关-->
+        <exclusion>
+          <groupId>org.apache.thrift</groupId>
+          <artifactId>libthrift</artifactId>
+        </exclusion>
+
+        <!--redis相关-->
+        <exclusion>
+          <groupId>redis.clients</groupId>
+          <artifactId>jedis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</project>

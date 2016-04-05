@@ -1,0 +1,34 @@
+mode:
+    production
+
+
+development:
+    datasources:
+        mysql:
+           disable: true
+        mongodb:
+           disable: true
+        redis:
+            disable: true
+    zk:
+        servers: dm-dev-02
+        conf_root_dir: /mars/type
+
+
+application:
+    controller: dcs.controller
+    model:      dcs.model
+    document:   dcs.document
+    service:    dcs.service
+    util:       dcs.utilFetchController
+    test:       test.dcs
+    template:
+        engine:
+           enable: false
+
+###############http config##################
+http:
+    port: 9105
+    disable: false
+    class:
+       port: "dcs.PortG"

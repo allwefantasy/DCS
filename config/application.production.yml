@@ -1,0 +1,33 @@
+mode:
+    production
+
+
+production:
+    datasources:
+        mysql:
+           disable: true
+        mongodb:
+           disable: true
+        redis:
+            host: 192.168.4.201
+            port: 6379
+            disable: false
+
+    zk:
+        servers: 192.168.4.201
+        conf_root_dir: /mars/type
+
+application:
+    controller: net.csdn.mars.controller
+    model:      net.csdn.mars.model
+    document:   net.csdn.mars.document
+    service:    net.csdn.mars.service
+    util:       net.csdn.mars.util
+    test:       test.net.csdn
+    template:
+        engine:
+           enable: false
+
+###############http config##################
+http:
+    port: 9001

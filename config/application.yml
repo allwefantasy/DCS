@@ -1,0 +1,58 @@
+mode:
+    production
+
+
+production:
+    datasources:
+        mysql:
+           disable: true
+        mongodb:
+           disable: true
+        redis:
+            disable: true
+    zk:
+        servers: dm-dev-02
+        conf_root_dir: /mars/type
+
+
+application:
+    controller: net.csdn.mars.controller
+    model:      net.csdn.mars.model
+    document:   net.csdn.mars.document
+    service:    net.csdn.mars.service
+    util:       net.csdn.mars.util
+    test:       test.net.csdn
+    template:
+        engine:
+           enable: false
+
+###############http config##################
+http:
+    port: 9105
+    disable: false
+
+stats:
+    mq:
+        name: stats-test
+        server: 192.168.5.175:9876
+    upload:
+        period: 2000
+        enable: false
+    projectName: gw
+
+
+mq:
+  server: 192.168.5.175:9876
+  group: mars-mq
+  deletedTopic: dg-deleted
+  disable: true
+
+
+cache:
+    dynamic: views,ups,downs,comments,view,care_num,apply_num
+    keyword: all,dynamic,static,simple,static_simple
+    timeout:
+        static: 1440
+        body: 1440
+        dynamic: 180
+    disable: true
