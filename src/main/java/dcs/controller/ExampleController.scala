@@ -12,4 +12,9 @@ class ExampleController extends ApplicationController {
   def hello() = {
     render(s"hello ${param("content")}")
   }
+
+  @At(path = Array("/"), types = Array(RestRequest.Method.GET, RestRequest.Method.POST))
+  def yes() = {
+    render(s"William")
+  }
 }
