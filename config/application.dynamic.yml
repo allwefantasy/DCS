@@ -2,7 +2,7 @@ mode:
     production
 
 
-development:
+production:
     datasources:
         mysql:
            disable: true
@@ -28,7 +28,5 @@ application:
 
 ###############http config##################
 http:
-    port: 9105
-    disable: false
     class:
        port: "dcs.PortG"
